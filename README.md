@@ -1,5 +1,5 @@
 # TSX-File-Downloader
-Python script that allows searching and downloadingt of files from the TSX Supersites repository
+Python script that allows searching and downloading of files from the TSX Supersites repository
 
 Requires user to have made a free account with TSX Supersites at https://sso.eoc.dlr.de/supersites/
 
