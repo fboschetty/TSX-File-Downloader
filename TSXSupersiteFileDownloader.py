@@ -12,7 +12,7 @@ from tqdm import tqdm
 
 # Function to find files on webpage
 def find_files(url):
-    soup = BeautifulSoup(requests.get(url).text)
+    soup = BeautifulSoup(requests.get(url).text, features="html.parser")
 
     hrefs = []
 
