@@ -35,7 +35,7 @@ BeamID = 'SL084'  # Choose BeamID here
 to_download = []
 for fileID in links:
     if (Orbit in fileID) & (BeamID in fileID):
-        to_download.append(URL+fileID)
+        to_download.append(fileID)
 
 # Download files
 
@@ -43,11 +43,12 @@ user=''  # TSXSupersite username
 key=''   # TSXSupersite password
 
 for url in to_download:
-    response = requests.get(url, auth=(user, key), stream=True)
+    print('Downloading:', url)
+    response = requests.get(URL+url, auth=(user, key), stream=True)
     total_size_in_bytes= int(response.headers.get('content-length', 0))
     block_size = 1024 #1 Kibibyte
     progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True)
-    with open('test.dat', 'wb') as file:
+    with open(str(url), 'wb') as file:
         for data in response.iter_content(block_size):
             progress_bar.update(len(data))
             file.write(data)
