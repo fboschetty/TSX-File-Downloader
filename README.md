@@ -11,4 +11,4 @@ Steps:
 
 3. Specify your Username and Password for TSX Supersites in the variables user and password.
 
-4. Wait for your files to download
+4. Wait for your files to download.
