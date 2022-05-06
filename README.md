@@ -4,7 +4,7 @@ Python script that allows searching and downloading of files from the TSX Supers
 Requires user to have made a free account with TSX Supersites at https://sso.eoc.dlr.de/supersites/
 
 All search parameters are now contained with a file seperate to the code: config.json.
-The following paramters need to be set there:
+The following parameters need to be set there:
 
 1. Specify the supersite you want to search. e.g. the Latin America supersite is found at https://download.geoservice.dlr.de/supersites/files/LatinAmerica/.
 So set the parameter *url* to "https://download.geoservice.dlr.de/supersites/files/"
