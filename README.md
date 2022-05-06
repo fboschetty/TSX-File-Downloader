@@ -7,8 +7,8 @@ All search parameters are now contained with a file seperate to the code: config
 The following paramters need to be set there:
 
 1. Specify the supersite you want to search. e.g. the Latin America supersite is found at https://download.geoservice.dlr.de/supersites/files/LatinAmerica/.
-So set the parameter *url* to https://download.geoservice.dlr.de/supersites/files/
-and the parameter *supersite* to LatinAmerica
+So set the parameter *url* to "https://download.geoservice.dlr.de/supersites/files/"
+and the parameter *supersite* to "LatinAmerica"
 
 2. Set the path to the directory you want to download to in the parameter *dir*.
 
