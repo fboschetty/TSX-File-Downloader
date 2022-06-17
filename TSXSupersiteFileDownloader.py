@@ -134,7 +134,7 @@ class FileDownloader:
             block_size = 1024 #1 Kibibyte
             
             progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True)
-            with open('test.dat', 'wb') as file:
+            with open(cfg.down_dir+str(file), 'wb') as file:
                 for data in response.iter_content(block_size):
                     progress_bar.update(len(data))
                     file.write(data)
