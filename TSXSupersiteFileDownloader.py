@@ -122,7 +122,8 @@ class FileDownloader:
                    user: str,
                    password: str,
                    url: str,
-                   supersite: str) -> None:
+                   supersite: str,
+                   down_dir: str) -> None:
         
         for file in to_download:
             
@@ -134,7 +135,7 @@ class FileDownloader:
             block_size = 1024 #1 Kibibyte
             
             progress_bar = tqdm(total=total_size_in_bytes, unit='iB', unit_scale=True)
-            with open(cfg.down_dir+str(file), 'wb') as file:
+            with open(down_dir+file, 'wb') as file:
                 for data in response.iter_content(block_size):
                     progress_bar.update(len(data))
                     file.write(data)
@@ -173,7 +174,7 @@ def main():
     print("\n")
     
     # Download Files
-    FileDownloader.Downloader(files, cfg.user, cfg.password, cfg.url, cfg.supersite)
+    FileDownloader.Downloader(files, cfg.user, cfg.password, cfg.url, cfg.supersite, cfg.down_dir)
     
     return cfg, files
 
